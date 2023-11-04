@@ -14,4 +14,8 @@ provider "aws" {
 resource "aws_instance" "hello-world" {
     ami = "ami-098940df4d3292e9a"
     instance_type = "t2.micro"
+
+    tags = {
+        Name = "HalloWorld"
+    }
 }
