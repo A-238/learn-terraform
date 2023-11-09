@@ -16,8 +16,11 @@ resource "aws_db_parameter_group" "mysql_standalone_parametergroup" {
   }
 }
 
+# ----------------------------------------------
+# RDS Option group
+# ----------------------------------------------
 resource "aws_db_option_group" "mysql_standalone_opotiongroup" {
-  name                 = "${var.project}-${var.environment}-mysql-standalone-parametergroup"
+  name                 = "${var.project}-${var.environment}-mysql-standalone-optiongroup"
   engine_name          = "mysql"
   major_engine_version = "8.0"
 }
